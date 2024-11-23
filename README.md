@@ -1,7 +1,7 @@
 # PostIt
 PostIt is a fully-featured social media web application, built with the MERN stack.  
 
-Deployed at: https://link-e4nmnfrmu-umang228s-projects.vercel.app  
+Deployed at: https://link-e8yiydsxq-umang228s-projects.vercel.app
 ![GIF of PostIt walkthrough](https://media.giphy.com/media/9tnaXy42T4NzSJdHhP/giphy.gif)
 
 ## Features
