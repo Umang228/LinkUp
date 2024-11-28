@@ -52,6 +52,13 @@ io.on("connection", (socket) => {
   socketServer(socket);
 });
 
+io.engine.on("headers", (headers, req) => {
+  headers["Access-Control-Allow-Origin"] = "https://post-it-six-peach.vercel.app";
+  headers["Access-Control-Allow-Methods"] = "GET, POST";
+  headers["Access-Control-Allow-Headers"] = "Content-Type, Authorization";
+  headers["Access-Control-Allow-Credentials"] = "true";
+});
+
 // Connect to MongoDB
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -69,9 +76,9 @@ app.use("/api/messages", messages);
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
+  app.use(express.static(path.join(__dirname, "/client")));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build", "index.html"));
+    res.sendFile(path.join(__dirname, "client/", "index.html"));
   });
 }
 
