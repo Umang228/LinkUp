@@ -21,7 +21,7 @@ const app = express();
 const httpServer = http.createServer(app);
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: ["http://localhost:3000", "https://post-it-frontend.vercel.app"],
+    origin: ["http://localhost:3000", "https://post-it-six-peach.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true,
   },
@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(helmet());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://post-it-frontend.vercel.app"],
+    origin: ["http://localhost:3000", "https://post-it-six-peach.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
   })
