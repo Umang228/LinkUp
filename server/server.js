@@ -17,7 +17,7 @@ dotenv.config();
 const httpServer = require("http").createServer(app);
 const io = require("socket.io")(httpServer, {
   cors: {
-    origin: ["http://localhost:3000", "https://frontend-link"],
+    origin: ["http://localhost:3000", "https://post-it-frontend.vercel.app"],
     methods: ["POST","GET"],
     credentials: true
   },
